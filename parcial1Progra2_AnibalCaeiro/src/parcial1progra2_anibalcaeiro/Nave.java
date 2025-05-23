@@ -50,7 +50,7 @@ public abstract class Nave implements Comparable<Nave> {
 
     @Override
     public int compareTo(Nave otra){
-        return Integer.compare(anoLanzamiento, anoLanzamiento);
+        return Integer.compare(otra.anoLanzamiento, this.anoLanzamiento);
     }
 
     @Override
