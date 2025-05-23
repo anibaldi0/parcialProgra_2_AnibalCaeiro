@@ -8,11 +8,11 @@ package parcial1progra2_anibalcaeiro;
  *
  * @author lili
  */
-public class CruceroEstelar extends Nave{
+public class CruceroEstelar extends Nave {
     
     private int cantidadPasajeros;
 
-    public CruceroEstelar(int cantidadPasajeros, String nombre, int capacidadTripulacion, int anoLanzamiento) {
+    public CruceroEstelar(String nombre, int capacidadTripulacion, int anoLanzamiento, int cantidadPasajeros) {
         super(nombre, capacidadTripulacion, anoLanzamiento);
         this.cantidadPasajeros = cantidadPasajeros;
     }
@@ -28,9 +28,6 @@ public class CruceroEstelar extends Nave{
 
     @Override
     public String toString() {
-        return "CruceroEstelar" + "cantidadPasajeros=" + cantidadPasajeros;
+        return super.toString() + ", Pasajeros: " + cantidadPasajeros;
     }
-    
-    
-    
 }

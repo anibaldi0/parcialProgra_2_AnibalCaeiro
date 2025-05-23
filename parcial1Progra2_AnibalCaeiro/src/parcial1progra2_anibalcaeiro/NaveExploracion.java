@@ -8,33 +8,25 @@ package parcial1progra2_anibalcaeiro;
  *
  * @author lili
  */
-public class NaveExploracion extends Nave{
+public class NaveExploracion extends Nave {
     private String tipoMision;
 
-    public NaveExploracion(String tipoMision, String nombre, int capacidadTripulacion, int anoLanzamiento) {
+    public NaveExploracion(String nombre, int capacidadTripulacion, int anoLanzamiento, String tipoMision) {
         super(nombre, capacidadTripulacion, anoLanzamiento);
         this.tipoMision = tipoMision;
     }
-    
-    public String getTipoMision(){
+
+    public String getTipoMision() {
         return tipoMision;
     }
 
     @Override
     public String getTipo() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }    
-
-    @Override
-    public int compareTo(Nave otra) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return "Nave de Exploracion";
     }
 
     @Override
     public String toString() {
-        return "NaveExploracion{" + "tipoMision=" + tipoMision + '}';
+        return super.toString() + ", Mision: " + tipoMision;
     }
-    
-    
-    
 }

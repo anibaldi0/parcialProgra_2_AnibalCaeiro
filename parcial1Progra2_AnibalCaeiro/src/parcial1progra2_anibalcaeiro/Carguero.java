@@ -12,10 +12,18 @@ public class Carguero extends Nave {
     
     private int capacidadCarga;
 
-    public Carguero(int capacidadCarga, String nombre, int capacidadTripulacion, int anoLanzamiento) {
+    public Carguero(String nombre, int capacidadTripulacion, int anoLanzamiento, int capacidadCarga) {
         super(nombre, capacidadTripulacion, anoLanzamiento);
+
+        if (capacidadCarga < 100) {
+            capacidadCarga = 100;
+        } else if (capacidadCarga > 500) {
+            capacidadCarga = 500;
+        }
+
         this.capacidadCarga = capacidadCarga;
     }
+
     
     public int getCapacidadCarga(){
         return capacidadCarga;
@@ -30,7 +38,7 @@ public class Carguero extends Nave {
 
     @Override
     public String toString() {
-        return "Carguero{" + "capacidadCarga= " + capacidadCarga + " toneladas";
+        return super.toString() + ", Carga: " + capacidadCarga + " toneladas";
     }
 
     
